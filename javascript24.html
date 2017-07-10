@@ -1,0 +1,41 @@
+<html>
+<head></head>
+<body>
+<script>
+function register(name){
+var date = new Date();
+date.setMonth(date.getMonth()+9);
+var cookie_exp = date.toUTCString();
+var final_cookie = "myCookie :"+encodeURIComponent(name)+ "; expire date:"+cookie_exp;
+document.cookie = final_cookie;
+}
+function getCookie(cookie_name){
+var search_cookie = cookie_name + "=";
+if(document.cookie.length > 0){
+start_position = document.cookie.indexOf(search_cookie);
+if(start_position!=-1){
+start_postion += search_cookie.length;
+end_postion = document.cookie.indexOf(";",start_position);
+if(end_postion == -1)
+end_postion = document.cookie.length;
+return (decodeURIComponent(document.cookie.substring(start_position, end_postion))) 
+}
+}
+}
+
+</script>
+<script>
+var name = getCookie("mycookie");
+if(name){
+document.write("welcome back :"+name);
+}
+else if(name == null){
+document.write("<form>");
+document.write("Enter Name: ");
+document.write("<input type='text' name='name' size='30'>");
+document.write("<input type='button' value='register' onClick='register(this.form.name.value); history.go(0)'>");
+document.write("</form>");
+}
+</script>
+</body>
+</html>

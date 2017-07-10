@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+<script>
+var visitor_name = prompt("enter name?","");
+var exp_date = new Date();
+exp_date.setMonth(exp_date.getMonth()+7);
+var cookie_date = exp_date.toUTCString();
+var final_cookie ="name ="+encodeURIComponent(visitor_name)+ ";expire_on ="+cookie_date;
+document.cookie =final_cookie;
+alert(final_cookie);
+</script>
+</body>
+</html>

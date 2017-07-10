@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<body>
+<button onclick="msg()">click</button>
+<script>
+function msg(){
+try{
+addlert("hello dear");
+}
+catch(err){
+var txt = "there was error.\n\n";
+txt+="Error description: " + err.description + "\n\n";
+txt+="Click OK to continue.\n\n";
+alert(txt);
+}
+}
+</script>
+</body>
+</html>

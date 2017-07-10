@@ -1,0 +1,4 @@
+javascript : its client side scripting language,which is used to create dynamic interactivity on website.
+----------
+topics:
+

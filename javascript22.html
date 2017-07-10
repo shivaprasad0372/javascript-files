@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<script>
+function setCookie(name,value,path,exp){
+if(exp == ""){
+var date = new Date();
+date.setMonth(date.getMonth()+9);
+var exp = date.toUTCString();
+ }
+ if(path != ""){
+ var path = "www.google.com";
+ }
+ var value = encodeURIComponent(value);
+ document.cookie = name + value + exp + path; 
+}
+CookieSet("shiva","prasad","","");
+alert(document.cookie);
+</script>
+</body>
+</html>

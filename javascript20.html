@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+<script>
+var x = prompt("enter the number bitween 5 to 10:","");
+try{
+if(x>10){
+	throw "err1";
+}
+else if(x<0){
+ throw "err2";
+}
+else if(isNaN(x)){
+throw "err3";
+}
+}
+catch(er){
+if(er=="err1"){
+alert("below 10 digits");
+}
+else if(er=="err2"){
+alert("above 1 digit");
+}
+else if(er=="err3"){
+alert("there is no value")
+}
+}
+</script>
+</body>
+</html>
